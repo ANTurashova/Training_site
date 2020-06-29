@@ -1,0 +1,9 @@
+Запустить сервер:
+>cd taskmanager
+>python manage.py runserver
+
+ctrl+c выйдет из сервера в командной строке 
+
+Создать новое приложение:
+>pethon manage.py startapp имя
+
