@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faac69a8-bac2-494f-960b-d99caed12a39" name="Default Changelist" comment="" />
+    <list default="true" id="faac69a8-bac2-494f-960b-d99caed12a39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main/templates/main/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my txt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/my txt.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +100,8 @@
       <option name="presentableId" value="Default" />
       <updated>1593435800987</updated>
       <workItem from="1593435806494" duration="1909000" />
+      <workItem from="1593439182212" duration="2975000" />
+      <workItem from="1593946409637" duration="6027000" />
     </task>
     <servers />
   </component>
@@ -108,5 +118,27 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593439219836">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="275" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1366.728@0.40.1366.728" timestamp="1593439219836" />
+    <state x="442" y="206" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593439237984">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="442" y="206" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1366.728@0.40.1366.728" timestamp="1593439237984" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/views.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
