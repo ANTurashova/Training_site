@@ -2,6 +2,9 @@
 >cd taskmanager
 >python manage.py runserver
 
+Адрес:
+127.0.0.1:8000
+
 ctrl+c выйдет из сервера в командной строке 
 
 Создать новое приложение:
@@ -12,3 +15,15 @@ html - в папке приложения создать папку templates,
 храним html-ки
 
 Django шаблонизатор 'jinja2'
+
+Создать миграции:
+python manage.py makemigrations
+
+Выполнить миграции:
+python manage.py migrate
+
+В админку: 
+http://127.0.0.1:8000/admin
+
+Регистрация: 
+python manage.py createsuperuser 

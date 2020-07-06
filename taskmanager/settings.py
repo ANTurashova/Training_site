@@ -120,5 +120,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+STATICFILES_DIRS = ["/Coding/Training_site/static", ]                                                     # папка с CSS
 STATIC_URL = '/static/'
