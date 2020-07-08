@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu"><a class="menu_a" href="#">3</a></div>
+            <div class="menu"><a class="menu_a" href="#">2</a></div>
+            <div class="menu"><a class="menu_a" href="#">Главная</a></div>
+        </div>
+        <div class="content">
+            <h2>Онлайн-магазин &laquo;{{ myname }}&raquo;</h2>
+            <h3>Оставьте ваш e-mail в форме:</h3>
+            <div>
+                <form action="" method="post">{% csrf_token %}
+                    {{ form.as_p }}  <!-- .as_p это обернуть каждую строчку в тег <p> -->
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <hr> Все права защищены &copy;&nbsp;2020 <a href="https://vk.com/fasschool" target="_blank">FAS</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'                                                                              # Зарегать созданное приложение
+    'main',                                                                             # Зарегать созданное приложение
+    'test_store',
+    'products',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -120,5 +123,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATICFILES_DIRS = ["/Coding/Training_site/static", ]                                                     # папка с CSS
 STATIC_URL = '/static/'
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static", "static_dev"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+
+# STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_prod")
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
+
+#uncomment
+# try:
+#     from .settings_prod import *
+# except:
+#     pass

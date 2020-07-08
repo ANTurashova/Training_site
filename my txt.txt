@@ -8,7 +8,7 @@
 ctrl+c выйдет из сервера в командной строке 
 
 Создать новое приложение:
->pethon manage.py startapp имя
+>python manage.py startapp имя
 
 html - в папке приложения создать папку templates, 
 в ний папку с именем приложения, и там уже
@@ -17,13 +17,55 @@ html - в папке приложения создать папку templates,
 Django шаблонизатор 'jinja2'
 
 Создать миграции:
-python manage.py makemigrations
+>python manage.py makemigrations имя_приложения 
 
 Выполнить миграции:
-python manage.py migrate
+>python manage.py migrate
 
 В админку: 
 http://127.0.0.1:8000/admin
 
-Регистрация: 
-python manage.py createsuperuser 
+Регистрация супер-пользователя: 
+>python manage.py createsuperuser 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Шаблон: 
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu"><a class="menu_a" href="#">3</a></div>
+            <div class="menu"><a class="menu_a" href="#">2</a></div>
+            <div class="menu"><a class="menu_a" href="#">Главная</a></div>
+        </div>
+        <div class="content">
+            <h2>Онлайн-магазин картин &laquo;{{ myname }}&raquo;</h2>
+            <h3>Наш магазин скоро откроется</h3>
+        </div>
+        <div class="footer">
+            <hr> Все права защищены &copy;&nbsp;2020 <a href="https://vk.com/fasschool" target="_blank">FAS</a>
+        </div>
+    </div>
+</body>
+</html>
