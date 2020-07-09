@@ -1,5 +1,6 @@
 from django.db import models
 from products.models import Product
+from django.db.models.signals import post_save  # Для def product_in_order_post_save
 
 
 class Status(models.Model):
@@ -34,6 +35,10 @@ class Order(models.Model):
         verbose_name = 'Заказ'
         verbose_name_plural = 'Заказы'
 
+    def save(self, *args, **kwargs):  # Переопределение метода save
+
+        super(Order, self).save(*args, **kwargs)  # Для модели Order
+
 
 class ProductInOrder(models.Model):
     order = models.ForeignKey(Order, blank=True, null=True, default=None, on_delete=models.CASCADE)
@@ -49,5 +54,28 @@ class ProductInOrder(models.Model):
         return "%s" % self.product.name
 
     class Meta:
-        verbose_name = 'Товар'
-        verbose_name_plural = 'Товары'
+        verbose_name = 'Товар в заказе'
+        verbose_name_plural = 'Товары в заказе'
+
+    def save(self, *args, **kwargs):  # Переопределение метода save
+        price_per_item = self.product.price  # Берём из продукта поле price
+        self.price_per_item = price_per_item  # Записать на саму запись
+        self.total_price = self.nmb * price_per_item  # self это поле в текущей записи, которая сохраняется
+
+
+
+        super(ProductInOrder, self).save(*args, **kwargs)  # Для модели ProductInOrder
+
+
+def product_in_order_post_save(sender, instance, created, **kwargs):  # Она будет работать после def save в class ProductInOrder
+    order = instance.order  # Это наш заказ
+    all_products_in_order = ProductInOrder.objects.filter(order=order, is_active=True)  # Посчитает товары в этом заказе
+
+    order_total_price = 0  # Сюда прибавлять при подсчёте общей стоимости
+    for item in all_products_in_order:  # Общая стоимость заказа
+        order_total_price += item.total_price
+
+    instance.order.total_price = order_total_price  # Пересчитать общую стоимость на самом заказе
+    instance.order.save(force_update=True)
+
+post_save.connect(product_in_order_post_save, sender=ProductInOrder)

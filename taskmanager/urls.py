@@ -7,7 +7,7 @@ admin.autodiscover()  # Джанго находит автоматически �
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/', include('main.urls')),                             # Пустая строка - переход на главную страничку
+    # path('main/', include('main.urls')),                             # Пустая строка - переход на главную страничку
     path('', include('test_store.urls')),
     path('products/', include('products.urls')),
     path('orders/', include('orders.urls')),

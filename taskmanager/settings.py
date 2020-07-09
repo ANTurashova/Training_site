@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',                                                                             # Зарегать созданное приложение
+    # 'main',                                                                           # Зарегать созданное приложение
     'test_store',
     'products',
     'orders',
