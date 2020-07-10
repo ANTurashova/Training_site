@@ -1,0 +1,61 @@
+{% extends 'base.html' %} <!-- Этот файл подставляем в base.html --> <!--  -->
+{% load static %}
+
+
+{% block content %}     <!-- Этот блок вставится в base.html -->
+    <div class="section-top">
+        <img src="{% static 'img/../../../static/static_dev/img/slider0.jpg' %}" class="img-responsive">
+    </div>
+    <div class="section section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Новые поступления
+                    </h1>
+                </div>
+                {% for product_image in products_images %}  <!-- Проходим по всем товарам, чтобы вывести -->
+                    {% include 'test_store/product_item.html' %}  <!-- Окошечко (div) с товаром -->
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section section-delivery">
+        <div>
+            <h3>Free shipping</h3>
+        </div>
+    </div>
+    <div class="section section2 phones-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Телефоны
+                    </h1>
+                </div>
+
+
+               <{% for product_image in products_images_phones %} -->
+                {{ product_images.product.name }}
+                    <!-- % include 'test_store/product_item.html' %} -->
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <div class="section section3 laptops-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Ноутбуки
+                    </h1>
+                </div>
+                {% for product_image in products_images_laptops %}
+                    {% include 'test_store/product_item.html' %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
