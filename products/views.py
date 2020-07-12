@@ -27,3 +27,7 @@
 # def x(request):                                             # Обязательно получить параметр request
 #     return HttpResponse("<h4>X</h4>")
 #
+
+from django.shortcuts import render
+from products.models import *
+
