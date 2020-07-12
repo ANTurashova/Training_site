@@ -8,9 +8,11 @@ class SubscriberAdmin (admin.ModelAdmin):
     list_display = [field.name for field in Subscriber._meta.fields]  # Вывести все поля
     # exclude = ["email"]  # на странице редактирования записи исключить поле
     # fields = ["email"]  # на страницк редактирования выводить только email
-    # list_filter = ["name"]  # справа появились фильтры фильтровать по одинаковому имени
+    list_filter = ["name"]  # справа появились фильтры фильтровать по одинаковому имени
     # search_fields = ["name"]  # сверху появился поиск по имени
     search_fields = ["name", "email"]
+
+    fields = ["email"]
 
     class Meta:
         model = Subscriber

@@ -1,7 +1,6 @@
+from django import forms
+from .models import *
 # Эта формочка будет работать с моделью
-# from django import forms
-# from .models import *
-#
 
 # class SubscriberForm(forms.ModelForm):  # Название обычно дают по имени модели плюс Form
 #

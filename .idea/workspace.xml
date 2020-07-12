@@ -20,10 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faac69a8-bac2-494f-960b-d99caed12a39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test_store/templates/products/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_store/templates/test_store/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_store/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_store/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_store/apps.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_store/templates/test_store/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/test_store/templates/test_store/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_store/templates/test_store/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_store/templates/test_store/product_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/test_store/templates/test_store/product_item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_store/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -117,7 +127,7 @@
       <workItem from="1593439182212" duration="2975000" />
       <workItem from="1593946409637" duration="16104000" />
       <workItem from="1594058167039" duration="38373000" />
-      <workItem from="1594584447505" duration="1959000" />
+      <workItem from="1594584447505" duration="5826000" />
     </task>
     <servers />
   </component>
@@ -145,6 +155,10 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="442" y="206" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1366.728@0.40.1366.728" timestamp="1593439237984" />
+    <state x="413" y="151" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594588309427">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="413" y="151" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1366.728@0.40.1366.728" timestamp="1594588309427" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1594070404068">
       <screen x="0" y="40" width="1366" height="728" />
     </state>

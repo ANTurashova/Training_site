@@ -3,8 +3,9 @@ from .forms import SubscriberForm  # Из этой директории из ф�
 from products.models import *
 
 
-def index(request):                                         # Обязательно получить параметр request
+def landing(request):                                         # Обязательно получить параметр request
     myname = "Великое Имя"
+    current_day = "03.01.2017"
     form = SubscriberForm(request.POST or None)
 
     if request.method == "POST" and form.is_valid():
@@ -24,6 +25,6 @@ def home(request):
     # products = Product.objects.filter(is_active=True)
     # Создаём переменные, чтобы прогнать их и вывести все товары. Выводим только активные.
     products_images = ProductImage.objects.filter(is_active=True, is_main=True, product__is_active=True)
-    # products_images_phones = products_images.filter(product__category__id=1)
-    # products_images_laptops = products_images.filter(product__category__id=2)
+    products_images_phones = products_images.filter(product__category__id=1)  # Что-то из этого для скидки
+    products_images_laptops = products_images.filter(product__category__id=2)  # Что-то из этого для скидки
     return render(request, 'test_store/home.html', locals())

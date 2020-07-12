@@ -4,7 +4,7 @@
 
 {% block content %}     <!-- Этот блок вставится в base.html -->
     <div class="section-top">
-      <!--  <img src="{% static 'img/../../../static/static_dev/img/slider0.jpg' %}" class="img-responsive">  -->
+        <!-- <img src="% static 'img/slider0.jpg' %}" class="img-responsive"> -->
     </div>
     <div class="section section1">
         <div class="container">
@@ -33,11 +33,8 @@
                         Телефоны
                     </h1>
                 </div>
-
-
-               <{% for product_image in products_images_phones %} -->
-                {{ product_images.product.name }}
-                    <!-- % include 'test_store/product_item.html' %} -->
+                {% for product_image in products_images_phones %}
+                    {% include 'test_store/product_item.html' %}
                 {% endfor %}
 
             </div>

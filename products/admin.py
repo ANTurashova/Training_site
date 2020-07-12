@@ -1,16 +1,20 @@
-# Регистрируем тут таблички
 from django.contrib import admin
 from .models import *  # Перед регистрацией из файла models импортируем все модели
-
-
-class ProductInOrderInline(admin.TabularInline):
-    model = ProductImage  # чтобы вложить фотографии на странице редактирования товара
-    extra = 0  # чтобы не было допонительных рядов с пустыми картинками
 
 
 class ProductImageInline(admin.TabularInline):
     model = ProductImage  # чтобы вложить фотографии на странице редактирования товара
     extra = 0  # чтобы не было допонительных рядов с пустыми картинками
+
+
+class ProductCategoryAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in ProductCategory._meta.fields]
+
+    class Meta:
+        model = ProductCategory
+
+
+admin.site.register(ProductCategory, ProductCategoryAdmin)
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -32,4 +36,3 @@ class ProductImageAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ProductImage, ProductImageAdmin)  # Регистрируем модель
-
