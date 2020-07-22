@@ -1,3 +1,4 @@
+<!-- Страница самого товара -->
 {% extends 'base.html' %}
 {% load static %}
 
@@ -26,7 +27,7 @@
                       <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active">
                             <a href="#description" aria-controls="home" role="tab" data-toggle="tab">
-                                Описание
+                                Описаниe
                             </a>
                         </li>
                         <li role="presentation">
@@ -49,6 +50,17 @@
                         <div role="tabpanel" class="tab-pane" id="messages">...</div>
                         <div role="tabpanel" class="tab-pane" id="settings">...</div>
                       </div>
+                </div>
+                <div> <!-- Кнопка купить -->
+                    <form id="form_buying_product" class="form-inline">
+                        <div class="form-group">
+                            <input type="number" class="form-control"> <!-- Вписывать колличество -->
+                        </div>
+                        <button type="submit" class="btn btn-success btn-buy">
+                            Купить
+                        </button>
+                    </form>
+
                 </div>
             </div>
         </div>
